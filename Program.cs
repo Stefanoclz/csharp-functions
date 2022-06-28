@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-
 void StampaArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
@@ -43,7 +42,18 @@ int sommaElementiArray(int[] array)
 }
 
 
-int[] testArray = { 2, 6, 7, 5, 3, 9 };
+Console.WriteLine("Quanti numeri vuoi inserire nell'array?");
+int lengthArray = Int32.Parse(Console.ReadLine());
+
+int[] testArray = new int[lengthArray];
+
+for (int i = 0; i < lengthArray; i++)
+{
+    Console.WriteLine("Inserisci un numero");
+    int element = Int32.Parse(Console.ReadLine());
+    testArray[i] = element;
+}
+
 
 Console.WriteLine("Stampare l’array di numeri fornito a video");
 StampaArray(testArray);
